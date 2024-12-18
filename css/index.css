@@ -204,8 +204,8 @@ p:nth-child(n+2) {
   flex-direction: row;
   box-sizing: border-box;
 
-  max-width: 360px;
-  min-height: 231px;
+  width: 100vw;
+  min-height: calc(64vw);
   padding: 16px 15px;
 
   background: #666666;
@@ -249,6 +249,7 @@ p:nth-child(n+2) {
   z-index: 1;
 
   box-sizing: border-box;
+  width: 100%;
   margin-top: auto;
   padding: 27px 20px;
 
@@ -959,8 +960,8 @@ p:nth-child(n+2) {
   }
 
   .trend {
-    max-width: 382px;
-    min-height: 247px;
+    width: calc(50vw - 2px);
+    min-height: 32vw;
     padding: 15px 20px;
   }
 
@@ -1188,5 +1189,22 @@ p:nth-child(n+2) {
 
 }
 
+@media (orientation: landscape) and (max-height: 640px) {
+  .trend {
+    width: calc(50vw - 2px);
+    min-height: 32vw;
+  }
+}
 
+@media (orientation: landscape) and (min-height: 641px) and (max-height: 1200px) {
+  .trend {
+    width: calc(25vw - 3px);
+    min-height: 16vw;
+    padding: 15px 20px;
+  }
+
+  .trend__content {
+    padding: 27px 30px;
+  }
+}
 

@@ -205,7 +205,7 @@ p:nth-child(n+2) {
   box-sizing: border-box;
 
   width: 100vw;
-  min-height: calc(64vw);
+  min-height: 231px;
   padding: 16px 15px;
 
   background: #666666;
@@ -261,13 +261,19 @@ p:nth-child(n+2) {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin: 0 0 6px;
+  margin: 0 0 10px;
   padding: 0;
   gap: 6px 20px;
   list-style: none;
 }
 
-.category A {
+.category {
+  display: flex;
+  height: auto;
+}
+
+.category a {
+  display: inline-block;
   font-size: 14px;
   font-weight: bold;
   line-height: 1;
@@ -384,6 +390,7 @@ p:nth-child(n+2) {
   margin: 0;
 
   font-size: 16px;
+  line-height: 1;
   font-weight: bold;
   text-align: center;
 
@@ -492,10 +499,11 @@ p:nth-child(n+2) {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-top: 6px;
 }
 
 .email-label {
-  margin-top: 23px;
+  margin-top: 24px;
 }
 
 .email-field {
@@ -517,7 +525,7 @@ p:nth-child(n+2) {
 
 .subscribe__btn {
   height: 48px;
-  margin-top: 17px;
+  margin-top: 18px;
 
   font-size: 14px;
   font-weight: bold;
@@ -533,12 +541,16 @@ p:nth-child(n+2) {
   background-color: #323232;
 }
 
+.tags-section {
+  margin-top: 1px;
+}
+
 .tags-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 24px;
-  gap: 6px 5px;
+  margin-top: 25px;
+  gap: 7px 5px;
 }
 
 .tag__btn {
@@ -568,10 +580,11 @@ p:nth-child(n+2) {
 .theme {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: end;
   box-sizing: border-box;
   height: 48px;
   padding-left: 1px;
+  padding-bottom: 12px;
   border-bottom: 1px solid #eeeeee;
 }
 
@@ -836,21 +849,21 @@ p:nth-child(n+2) {
   flex-direction: column;
 }
 
-.email-checkbox__div {
+.email-radio__div {
   display: flex;
   flex-direction: row;
   margin-top: 6px;
   column-gap: 34px;
 }
 
-.checkbox__span {
+.radio__span {
   position: relative;
   display: inline-block;
   margin-left: 31px;
   line-height: 1;
 }
 
-.checkbox__span::before {
+.radio__span::before {
   position: absolute;
   top: -6px;
   left: -31px;
@@ -868,12 +881,12 @@ p:nth-child(n+2) {
   content: "";
 }
 
-.email-checkbox {
+.email-radio {
   position: fixed;
   transform: scale(0);
 }
 
-.email-checkbox:checked + .checkbox__span::before {
+.email-radio:checked + .radio__span::before {
   background-image: url("../images/svg/form-circle.svg");
 }
 
@@ -961,7 +974,7 @@ p:nth-child(n+2) {
 
   .trend {
     width: calc(50vw - 2px);
-    min-height: 32vw;
+    min-height: 247px;
     padding: 15px 20px;
   }
 
@@ -976,6 +989,7 @@ p:nth-child(n+2) {
   .posts-section {
     flex-basis: 392px;
     flex-grow: 0;
+    row-gap: 42px;
   }
 
   .post__preview {
@@ -1018,6 +1032,9 @@ p:nth-child(n+2) {
     height: 226px;
   }
 
+  .product__frame {
+    padding: 50px 22px 25px 18px;
+  }
 
   .popup__container {
     width: 390px;
@@ -1118,7 +1135,7 @@ p:nth-child(n+2) {
   }
 
   .posts-section {
-    row-gap: 60px;
+    row-gap: 50px;
   }
 
   .post__preview {
@@ -1134,7 +1151,7 @@ p:nth-child(n+2) {
   }
 
   .post__date-author {
-    margin: 28px 0 45px;
+    margin: 28px 0 44px;
   }
 
   .post__text {
@@ -1161,6 +1178,10 @@ p:nth-child(n+2) {
     width: 222px;
   }
 
+  .production-section {
+    padding-top: 50px;
+  }
+
   .product {
     width: 347px;
   }
@@ -1168,6 +1189,10 @@ p:nth-child(n+2) {
   .product__preview {
     width: 300px;
     height: 205px;
+  }
+
+  .product__frame {
+    padding: 50px 22px 25px 18px;
   }
 
   .footer-container {
@@ -1192,14 +1217,14 @@ p:nth-child(n+2) {
 @media (orientation: landscape) and (max-height: 640px) {
   .trend {
     width: calc(50vw - 2px);
-    min-height: 32vw;
+    min-height: 247px;
   }
 }
 
 @media (orientation: landscape) and (min-height: 641px) and (max-height: 1200px) {
   .trend {
     width: calc(25vw - 3px);
-    min-height: 16vw;
+    min-height: 320px;
     padding: 15px 20px;
   }
 
